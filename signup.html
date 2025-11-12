@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Logo.png">
+    <link rel="stylesheet" href="CSS/bootstrap.css"/>
+    <link rel="stylesheet" href="CSS/all.css"/>
+	<link rel="stylesheet" href="CSS/styles.css"/>
+    <title>Sign Up</title>
+</head>
+<body>
+     <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Left side: Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/Logo.png" alt="SweetPea Dolls Logo"> <!-- Replace with your logo -->
+                </a>
+
+                <!-- Right side: Buttons -->
+                <div id="signLinks" class="d-flex ms-auto custom-margin">
+                    <a href="login.html" class="btn btn-outline-light btn-custom">Login</a>
+                    <a href="signup.html" class="btn btn-light btn-custom">Sign Up</a>
+                </div>
+                <div id="welcomeMsg" class="me-2"></div>
+            </div>
+        </nav>
+
+     <!--SignUp Form-->
+        <div class="container shadow border-light border p-5 mt-custom">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label for="fstName">First Name:</label>
+                        <input id="fstName" type="text" class="form-control" placeholder="Enter First Name" name="fstName" required>
+                    </div>
+                    <div class="col">
+                        <label for="lstName">Last Name:</label>
+                        <input id="lstName" type="text" class="form-control" placeholder="Enter Last Name" name="lstName" required>
+                    </div>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" class="form-control" placeholder="Enter email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pswd">Password:</label>
+                    <input id="pswd" type="password" class="form-control"  placeholder="Enter password" name="pswd" required>
+                </div>
+                <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input id="rememberMe" class="form-check-input" type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                <button id="submitBtn" type="submit" class="btn btn-dark">Register</button>
+
+                
+            </form>
+            
+            <label class="form-check-label mt-3">
+                    Have an account <a href="login.html">Login</a>
+            </label>
+        </div>
+
+        <!-- Popup structure 
+        <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+            <p>Account created successfuly!</p>
+            <button class="btn btn-dark" onclick="window.location='login.html'">OK</button>
+        </div>
+        </div>
+        -->
+
+        <script src="js/signup.js"></script>
+        <script src="js/scripts.js"></script>
+</body>
+</html>
