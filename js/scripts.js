@@ -217,7 +217,8 @@ function drawViewProductsPage(chosenID) {
           <div class="product-data">
             <span>Category: </span><span>${chosenItem.category}</span><br/>
             <span>Price: </span><span>LE</span>
-            <span id='cartprice${chosenItem.id}'>${chosenItem.price * chosenItemCount.length}</span></div> 
+            <span id='cartprice${chosenItem.id}'>${chosenItem.price * chosenItemCount.length}</span>
+            </div> 
 
             <div class="row product-buttons">
                 <div class='col-12 col-md-12 col-lg-5 mt-2'>
@@ -362,6 +363,7 @@ function decreaseProduct(id, price){
 
         if(page == 'view-products.html'){
             document.getElementById(`cartCount${id}`).innerHTML=  productCountNum -1;
+            document.getElementById(`cartprice${id}`).innerHTML=  priceCount - price;
             updatePrice(price, 1, 0)
         }
 
@@ -414,6 +416,7 @@ function increaseProduct(id, price){
     if(page == 'view-products.html'){
         document.getElementById(`cartCount${id}`).innerHTML=  productCountNum + 1;
         updatePrice(price, 1, 1)
+        document.getElementById(`cartprice${id}`).innerHTML=  priceCount + price;
     }
 
 
